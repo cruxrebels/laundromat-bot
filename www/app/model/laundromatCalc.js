@@ -145,7 +145,7 @@ function registerForUpdate(){
 		$("#lblEngagedWasherCount").text((washers.length - washer_state.free - washer_state.outoforder).toString());
 		if (washer_state.freeIn != null){
 			$("#divWasherMSG").css("visibility", "visible")
-			$("#lblWasherIds").text((washer_state.nextGoIds.length > 0 ? "Machines ": "Machine ") + washer_state.nextGoIds.join(", "));
+			$("#lblWasherIds").text((washer_state.nextGoIds.length > 1 ? "Machines ": "Machine ") + washer_state.nextGoIds.join(", "));
 			$("#lblWasherFreeIn").text(washer_state.freeIn.toString());
 		}
 		else
@@ -154,7 +154,7 @@ function registerForUpdate(){
 		$("#lblEngagedDryerCount").text((dryers.length - dryer_state.free - dryer_state.outoforder).toString());
 		if (dryer_state.freeIn != null){
 			$("#divDryerMSG").css("visibility", "visible")
-			$("#lblDryerIds").text((dryer_state.nextGoIds.length > 0 ? "Machines ": "Machine ") + dryer_state.nextGoIds.join(", "));
+			$("#lblDryerIds").text((dryer_state.nextGoIds.length > 1 ? "Machines ": "Machine ") + dryer_state.nextGoIds.join(", "));
 			$("#lblDryerFreeIn").text(dryer_state.freeIn.toString());
 		}
 		else
